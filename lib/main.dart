@@ -20,7 +20,7 @@ class CMSApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: LoginScreen(),
+      body: SafeArea(child: LoginScreen()),
        
     
     );
