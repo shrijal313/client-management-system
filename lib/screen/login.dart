@@ -1,5 +1,7 @@
+import 'package:cms/widgets/emailFieldForm.dart';
+import 'package:cms/widgets/paswordFieldForm.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+// import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -28,23 +30,19 @@ class _LoginScreenState extends State<LoginScreen> {
                         letterSpacing: 1,
                       ))),
                 ),
-                SvgPicture.asset(
-                  "asset/images/front.svg",
-                  height: MediaQuery.of(context).size.height * .6,
+                Image(image:
+                AssetImage("asset/images/front.png"),
                 ),
+                // SvgPicture.asset(
+                //   "asset/images/login.svg",
+                //   color: Colors.white,
+                //   height: MediaQuery.of(context).size.height * .6,
+                // ),
                 SizedBox(
                   height: 10,
                 ),
-                Container(
-                    width: MediaQuery.of(context).size.width * .8,
-                    margin: EdgeInsets.all(10),
-                    padding: EdgeInsets.symmetric(horizontal: 20, vertical: 5),
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(30),
-                        color: Color(0xffb780d9)),
-                    child: TextField(
-                      keyboardType: TextInputType.emailAddress,
-                    )),
+                EmailFieldContainer(),
+                PasswordFieldContainer(),
               ],
             ),
           ),
@@ -53,3 +51,4 @@ class _LoginScreenState extends State<LoginScreen> {
     );
   }
 }
+
