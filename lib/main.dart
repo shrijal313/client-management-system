@@ -11,8 +11,9 @@ class CMS extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: "Client Management System",
+      theme: ThemeData(primaryColor: Colors.purple[400],),
       home: CMSApp(),
-    );
+    );  
   }
 }
 
